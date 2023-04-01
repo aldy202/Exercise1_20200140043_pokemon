@@ -28,11 +28,11 @@ class GettingStart extends StatelessWidget {
           ),
           Text(
             "Wellcome to Pokedex",
-            style: TextStyle(fontSize: 15, color: Colors.black),
+            style: TextStyle(fontSize: 15, color: Colors.grey),
           ),
           Text(
             "You can find your favorite pokemon here",
-            style: TextStyle(fontSize: 15, color: Colors.black),
+            style: TextStyle(fontSize: 15, color: Colors.grey),
           ),
           SizedBox(height: 120,),
           Image.asset(('asset/image/pokemonball.png'),
