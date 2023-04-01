@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import 'login_page.dart';
+
 class GettingStart extends StatelessWidget {
   const GettingStart({super.key});
 
