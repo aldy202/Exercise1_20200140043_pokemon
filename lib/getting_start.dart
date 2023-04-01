@@ -36,6 +36,13 @@ class GettingStart extends StatelessWidget {
           Image.asset(('asset/image/pokemonball.png'),
           height: 150,
           alignment: Alignment.bottomCenter),
+          SizedBox(height: 150),
+          FloatingActionButton(
+            child: Icon(Icons.arrow_right_alt),
+            backgroundColor: Colors.amber,
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+            })
           
         ],
       ),
