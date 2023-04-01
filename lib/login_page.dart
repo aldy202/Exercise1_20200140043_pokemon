@@ -1,3 +1,4 @@
+import 'package:exercise1_pokemon/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -52,79 +53,92 @@ class _LoginPageState extends State<LoginPage> {
                         fontWeight: FontWeight.w700),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 40,
                   ),
-                  TextFormField(
-                    keyboardType: TextInputType.name,
-                    controller: namaController,
-                    decoration: InputDecoration(
-                        labelText: "Name",
-                        hintText: "Enter your name",
-                        border: OutlineInputBorder(),
-                        prefixIcon: Icon(Icons.person)),
-                    validator: (value) {
-                      bool nameValid = RegExp(
-                              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                          .hasMatch(value!);
 
-                      if (value.isEmpty) {
-                        return "Please enter your name";
-                      }
-                    },
+                  
+                  
+                  Container(
+                    
+                    width: 350,
+                    child: TextFormField(
+                      keyboardType: TextInputType.name,
+                      controller: namaController,
+                      
+                      decoration: InputDecoration(
+                          labelText: "Name",
+                          hintText: "Enter your name",
+                          prefixIcon: Icon(Icons.person)),
+                      validator: (value) {
+                        bool nameValid = RegExp(
+                                r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                            .hasMatch(value!);
+                  
+                        if (value.isEmpty) {
+                          return "Please enter your name";
+                        }
+                      },
+                    ),
                   ),
                   SizedBox(height: 20),
-                  TextFormField(
-                    keyboardType: TextInputType.visiblePassword,
-                    obscureText: passToggel,
-                    controller: passController,
-                    decoration: InputDecoration(
-                      labelText: "Password",
-                      hintText: "Enter your password",
-                      border: OutlineInputBorder(),
-                      prefixIcon: Icon(Icons.lock),
-                      suffix: InkWell(
-                        onTap: () {
-                          setState(() {
-                            passToggel = !passToggel;
-                          });
-                        },
-                        child: Icon(passToggel
-                            ? Icons.visibility
-                            : Icons.visibility_off),
-                      ),
-                    ),
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return "Please enter your password";
-                      } else if (passController.text.length < 6) {
-                        return "Please must be atleast 6 characters";
-                      }
-                    },
-                  ),
-                  SizedBox(height: 40),
-                  InkWell(
-                    onTap: () {
-                      if (_formfield.currentState!.validate()) {
-                        print("Success");
-                        namaController.clear();
-                        passController.clear();
-                      }
-                    },
-                    child: Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      child: Center(
-                          child: Text(
-                        "Sign In",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
+                  Container(
+                    width: 350,
+                    child: TextFormField(
+                      keyboardType: TextInputType.visiblePassword,
+                      obscureText: passToggel,
+                      controller: passController,
+                      decoration: InputDecoration(
+                        labelText: "Password",
+                        hintText: "Enter your password",
+                        prefixIcon: Icon(Icons.lock),
+                        suffix: InkWell(
+                          onTap: () {
+                            setState(() {
+                              passToggel = !passToggel;
+                            });
+                          },
+                          child: Icon(passToggel
+                              ? Icons.visibility_off
+                              : Icons.visibility),
                         ),
-                      )),
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return "Please enter your password";
+                        } else if (passController.text.length < 6) {
+                          return "Please must be atleast 6 characters";
+                        }
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 45),
+
+                  Container(
+                    width: 300,
+                    child: InkWell(
+                      onTap: () {
+                        if (_formfield.currentState!.validate()) {
+                          print("Success");
+                          namaController.clear();
+                          passController.clear();
+                        }
+                      },
+                      child: Container(
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.amber,
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Center(
+                            child: Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )),
+                      ),
                     ),
                   ),
                   Row(
