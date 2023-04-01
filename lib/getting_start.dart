@@ -32,6 +32,11 @@ class GettingStart extends StatelessWidget {
             "You can find your favorite pokemon here",
             style: TextStyle(fontSize: 15, color: Colors.black),
           ),
+          SizedBox(height: 120,),
+          Image.asset(('asset/image/pokemonball.png'),
+          height: 150,
+          alignment: Alignment.bottomCenter),
+          
         ],
       ),
     ));
