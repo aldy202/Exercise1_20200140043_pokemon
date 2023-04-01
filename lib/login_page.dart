@@ -10,7 +10,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
   final _formfield = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passController = TextEditingController();
@@ -18,6 +17,17 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: SingleChildScrollView(
+          child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 30),
+        child: Form(
+            child: Form(
+          key: _formfield,
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center, children: []),
+        )),
+      )),
+    );
   }
 }
