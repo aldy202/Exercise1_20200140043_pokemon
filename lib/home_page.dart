@@ -15,8 +15,8 @@ class MyWidget extends StatelessWidget {
         children: [
           Container(
             child: Container(
-              child: Padding(   
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0), 
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
                 child: Row(children: [
                   RichText(
                       text: TextSpan(
@@ -34,11 +34,11 @@ class MyWidget extends StatelessWidget {
                             ))
                       ])),
                   SizedBox(
-                    width: 210.0,
+                    width: 160.0,
                   ),
                   CircleAvatar(
                     backgroundImage: AssetImage("asset/image/profil.png"),
-                    radius:17,
+                    radius: 17,
                   )
                 ]),
               ),
@@ -65,38 +65,167 @@ class MyWidget extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: 'Search Pokemon',
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    
-                  ),
-                  contentPadding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0)
-                ),
+                    hintText: 'Search Pokemon',
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    contentPadding:
+                        EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0)),
               ),
             ),
           ),
           SizedBox(height: 20.0),
-          Expanded(
-            child: ListView.builder(
-              itemCount: 4,
-              itemBuilder: (BuildContext context, int index) {
-                return Container(
-                  width: 50.0,
-                  child: Card(
-                    child: ListTile(
-                      leading: Icon(Icons.person),
-                      title: Text("Item $index"),
-                      subtitle: Text("Deskripsi item $index"),
-                      trailing: Icon(Icons.arrow_forward_ios),
-                      onTap: () {},
-                      contentPadding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 12.0)
-                    ),
-                  ),
-                );
-              },
-              
+          Divider(
+            color: Colors.black,
+          ),
+          ListTile(
+            isThreeLine: true,
+            leading: Image.asset(
+              "asset/image/squirtle.png",
+              height: 100,
+              width: 100,
             ),
+            title: Text(
+              "Squirtle",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            subtitle: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                RichText(
+                  text: TextSpan(
+                    text: "Poisoned",
+                    style: TextStyle(
+                        color: Colors.white, backgroundColor: Colors.blue),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: "Water",
+                        style: TextStyle(
+                            color: Colors.white, backgroundColor: Colors.amber),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s")
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          ListTile(
+            isThreeLine: true,
+            leading: Image.asset(
+              "asset/image/squirtle.png",
+              height: 100,
+              width: 100,
+            ),
+            title: Text(
+              "Squirtle",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            subtitle: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                RichText(
+                  text: TextSpan(
+                    text: "Poisoned",
+                    style: TextStyle(
+                        color: Colors.white, backgroundColor: Colors.blue),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: "Water",
+                        style: TextStyle(
+                            color: Colors.white, backgroundColor: Colors.amber),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s")
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          ListTile(
+            isThreeLine: true,
+            leading: Image.asset(
+              "asset/image/squirtle.png",
+              height: 100,
+              width: 100,
+            ),
+            title: Text(
+              "Squirtle",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            subtitle: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                RichText(
+                  text: TextSpan(
+                    text: "Poisoned",
+                    style: TextStyle(
+                        color: Colors.white, backgroundColor: Colors.blue),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: "Water",
+                        style: TextStyle(
+                            color: Colors.white, backgroundColor: Colors.amber),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s")
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          ListTile(
+            isThreeLine: true,
+            leading: Image.asset(
+              "asset/image/squirtle.png",
+              height: 100,
+              width: 100,
+            ),
+            title: Text(
+              "Squirtle",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            subtitle: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                RichText(
+                  text: TextSpan(
+                    text: "Poisoned",
+                    style: TextStyle(
+                        color: Colors.white, backgroundColor: Colors.blue),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: "Water",
+                        style: TextStyle(
+                            color: Colors.white, backgroundColor: Colors.amber),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s")
+              ],
+            ),
+          ),
+          Divider(
+            color: Colors.black,
           ),
         ],
       ),
