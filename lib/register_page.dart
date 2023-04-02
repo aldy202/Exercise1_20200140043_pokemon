@@ -182,17 +182,24 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(
                   height: 4,
                 ),
+
+
+
+
                 Container(
                     decoration: BoxDecoration(
                         color: Colors.amber,
                         borderRadius: BorderRadius.circular(50)),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.push(
+                        if(_formkey.currentState!.validate()){
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
                                     MyWidget(nama: _usernameController.text)));
+
+                        } 
                       },
                       child: Center(
                           child: Text(
