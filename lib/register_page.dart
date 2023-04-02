@@ -182,10 +182,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(
                   height: 4,
                 ),
-
-
-
-
                 Container(
                     decoration: BoxDecoration(
                         color: Colors.amber,
