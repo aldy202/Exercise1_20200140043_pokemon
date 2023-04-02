@@ -1,3 +1,4 @@
+import 'package:exercise1_pokemon/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -177,36 +178,31 @@ class _RegisterPageState extends State<RegisterPage> {
                       return null;
                     },
                   ),
-                  ),
-                // Padding(
-                //   padding: const EdgeInsets.symmetric(vertical: 32.0),
-                //   child: ElevatedButton(
-                //     style: ElevatedButton.styleFrom(
-                //       padding: const EdgeInsets.symmetric(vertical: 10),
-                //     ),
-                //     onPressed: () {
-                //       if (_formKey.currentState!.validate()) {
-                //         Navigator.push(
-                //           context,
-                //           MaterialPageRoute(
-                //             builder: (context) => Dashboard(User(
-                //                 _usernameController.text,
-                //                 _emailController.text,
-                //                 _passwordController.text)),
-                //           ),
-                //         );
-                //       }
-                //     },
-                //     child: SizedBox(
-                //       width: double.infinity,
-                //       height: 40,
-                //       child: ElevatedButton(
-                //         child: Text("Register"),
-                //         onPressed: () {},
-                //       ),
-                //     ),
-                //   ),
-                // ),
+                ),
+                SizedBox(
+                  height: 4,
+                ),
+                Container(
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(50)),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    MyWidget(nama: _usernameController.text)));
+                      },
+                      child: Center(
+                          child: Text(
+                        "REGISTER",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17),
+                      )),
+                    )),
               ],
             ),
           ),
